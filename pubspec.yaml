@@ -1,0 +1,19 @@
+name: growable_text
+description: "A text widget that will grow to fill the width of it's parent."
+version: 0.0.1
+homepage: https://github.com/emmaweberyd/growable_text.git
+
+environment:
+  sdk: '>=3.2.3 <4.0.0'
+  flutter: ">=1.17.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+
+flutter:
