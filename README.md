@@ -50,5 +50,5 @@ If you find a bug but don't know how to fix it, please create an issue.
 If you fixed a bug or implemented a feature, please make a pull request.
 
 <!-- Links -->
-[with]: https://raw.githubusercontent.com/emmaweberyd/growable_text/master/images/with.png
-[without]: https://raw.githubusercontent.com/emmaweberyd/growable_text/master/images/without.png
+[with]: https://raw.githubusercontent.com/emmaweberyd/growable_text/main/images/with.png
+[without]: https://raw.githubusercontent.com/emmaweberyd/growable_text/main/images/without.png
