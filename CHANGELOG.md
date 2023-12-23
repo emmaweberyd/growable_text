@@ -1,3 +1,7 @@
+## 0.0.3
+
+Optimize and organize
+
 ## 0.0.2
 
 Add example
