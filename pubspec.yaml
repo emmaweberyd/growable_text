@@ -1,6 +1,6 @@
 name: growable_text
 description: "A text widget that will grow to fill the width of it's parent."
-version: 0.0.1
+version: 0.0.2
 homepage: https://github.com/emmaweberyd/growable_text.git
 
 environment:
