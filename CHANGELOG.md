@@ -1,10 +1,14 @@
+## 0.0.4
+
+Add Text widget's arguments.
+
 ## 0.0.3
 
-Optimize and organize
+Optimize and organize.
 
 ## 0.0.2
 
-Add example
+Add example.
 
 ## 0.0.1
 
