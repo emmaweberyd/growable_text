@@ -15,7 +15,11 @@ class MainApp extends StatelessWidget {
         body: Container(
           color: Colors.blue,
           width: 200,
-          child: const GrowableText('Hello World!'),
+          child: const Column(
+            children: [
+              GrowableText('Hello World!'),
+            ],
+          ),
         ),
       ),
     );

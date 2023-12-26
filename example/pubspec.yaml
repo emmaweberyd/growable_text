@@ -1,6 +1,7 @@
 name: example
 description: "An example Flutter project."
 version: 1.0.0+1
+publish_to: none
 
 environment:
   sdk: '>=3.2.3 <4.0.0'
@@ -9,7 +10,8 @@ dependencies:
   flutter:
     sdk: flutter
   cupertino_icons: ^1.0.2
-  growable_text: ^0.0.1
+  growable_text: 
+    path: ../
 
 dev_dependencies:
   flutter_test:

@@ -12,7 +12,6 @@ class GrowableText extends StatelessWidget {
     this.locale,
     this.softWrap,
     this.overflow,
-    this.textScaleFactor,
     this.textScaler,
     this.maxLines,
     this.semanticsLabel,
@@ -29,7 +28,6 @@ class GrowableText extends StatelessWidget {
   final Locale? locale;
   final bool? softWrap;
   final TextOverflow? overflow;
-  final double? textScaleFactor;
   final TextScaler? textScaler;
   final int? maxLines;
   final String? semanticsLabel;
@@ -39,25 +37,31 @@ class GrowableText extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return FittedBox(
-      fit: BoxFit.contain,
-      child: Text(
-        data,
-        style: style,
-        strutStyle: strutStyle,
-        textAlign: textAlign,
-        textDirection: textDirection,
-        locale: locale,
-        softWrap: softWrap,
-        overflow: overflow,
-        textScaleFactor: textScaleFactor,
-        textScaler: textScaler,
-        maxLines: maxLines,
-        semanticsLabel: semanticsLabel,
-        textWidthBasis: textWidthBasis,
-        textHeightBehavior: textHeightBehavior,
-        selectionColor: selectionColor,
-      ),
+    return LayoutBuilder(
+      builder: (context, constraints) {
+        return SizedBox(
+          width: constraints.maxWidth,
+          child: FittedBox(
+            fit: BoxFit.contain,
+            child: Text(
+              data,
+              style: style,
+              strutStyle: strutStyle,
+              textAlign: textAlign,
+              textDirection: textDirection,
+              locale: locale,
+              softWrap: softWrap,
+              overflow: overflow,
+              textScaler: textScaler,
+              maxLines: maxLines,
+              semanticsLabel: semanticsLabel,
+              textWidthBasis: textWidthBasis,
+              textHeightBehavior: textHeightBehavior,
+              selectionColor: selectionColor,
+            ),
+          ),
+        );
+      },
     );
   }
 }

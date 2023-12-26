@@ -7,12 +7,49 @@ void main() {
     await tester.pumpWidget(
       const MaterialApp(
         home: Scaffold(
-          backgroundColor: Colors.white,
           body: GrowableText('Hello World!'),
         ),
       ),
     );
 
     expect(find.text('Hello World!'), findsOneWidget);
+  });
+
+  testWidgets('GrowableText should take up width of parent',
+      (WidgetTester tester) async {
+    await tester.pumpWidget(
+      const MaterialApp(
+        home: Scaffold(
+          body: SizedBox(
+            width: 200,
+            child: GrowableText('Hello World!'),
+          ),
+        ),
+      ),
+    );
+
+    final Size baseSize = tester.getSize(find.byType(GrowableText));
+    expect(baseSize.width, equals(200.0));
+  });
+
+  testWidgets('GrowableText should take up max width of flex type widget',
+      (WidgetTester tester) async {
+    await tester.pumpWidget(
+      const MaterialApp(
+        home: Scaffold(
+          body: SizedBox(
+            width: 200,
+            child: Column(
+              children: [
+                GrowableText('Hello World!'),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+
+    final Size baseSize = tester.getSize(find.byType(GrowableText));
+    expect(baseSize.width, equals(200.0));
   });
 }
